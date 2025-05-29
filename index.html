@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manifest Your Wealth - Limited Offer</title>
-  <style>
-    /* Reset */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }<!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manifest ANYTHING in 10 Minutes - Revolutionary Technique Finally Revealed</title>
@@ -337,6 +326,80 @@
         .hidden {
             display: none;
         }
+        /* Responsive: Mobile Portrait */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .container {
+    padding: 0 8px;
+  }
+  .hero h1 { font-size: 2rem; }
+  .hero h2 { font-size: 1.2rem; }
+  .current-price { font-size: 2rem; }
+  .cta-button { padding: 12px 18px; font-size: 1rem; }
+  .feature-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* Responsive: Mobile Landscape */
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+  .container {
+    padding: 0 4px;
+  }
+  .feature-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 12px;
+  }
+  .feature-card {
+    min-width: 220px;
+    flex: 0 0 auto;
+  }
+}
+
+/* Responsive: Tablets */
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+  .container {
+    padding: 0 16px;
+  }
+  .hero h1 { font-size: 2.2rem; }
+  .hero h2 { font-size: 1.5rem; }
+  .current-price { font-size: 2.2rem; }
+  .cta-button { padding: 14px 24px; font-size: 1.1rem; }
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* Responsive: Laptops and Desktops */
+@media only screen and (min-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+  .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+}
+
+/* Orientation-specific tweaks */
+@media only screen and (orientation: portrait) {
+  .email-form, .price-section, .bonus-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .hero-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -393,7 +456,7 @@
                         <form action="https://formspree.io/f/xzzrnjqw" method="POST" id="emailForm">
                             <input type="email" name="email" class="email-input" placeholder="Enter your email address..." required>
                             <br>
-                            <button type="submit" class="cta-button">
+                            <button type="submit" class="cta-button" id="gg">
                                 GET INSTANT ACCESS - ₹99 ONLY
                             </button>
                         </form>
@@ -464,23 +527,39 @@
 
     <script>
         // Countdown timer
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const endTime = now + (24 * 60 * 60 * 1000); // 24 hours from now
-            const distance = endTime - now;
-            
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById('countdown').innerHTML = 
-                String(hours).padStart(2, '0') + ':' + 
-                String(minutes).padStart(2, '0') + ':' + 
-                String(seconds).padStart(2, '0');
-        }
-        
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+     function updateCountdown() {
+    let endTime = localStorage.getItem('countdownEndTime');
+
+    if (!endTime) {
+        endTime = new Date().getTime() + (10 * 60 * 1000);
+        localStorage.setItem('countdownEndTime', endTime);
+    } else {
+        endTime = Number(endTime);
+    }
+
+    const now = new Date().getTime();
+    let distance = endTime - now;
+
+    if (distance <= 0) {
+        // Restart countdown from 10 minutes again
+        endTime = new Date().getTime() + (10 * 60 * 1000);
+        localStorage.setItem('countdownEndTime', endTime);
+        distance = endTime - now;
+    }
+
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('countdown').innerHTML =
+        String(hours).padStart(2, '0') + ':' +
+        String(minutes).padStart(2, '0') + ':' +
+        String(seconds).padStart(2, '0');
+}
+
+const interval = setInterval(updateCountdown, 1000);
+updateCountdown();
+
 
         // Email form handling
         document.getElementById('emailForm').addEventListener('submit', function(e) {
@@ -505,10 +584,10 @@
         });
 
         // Buy now button
-        document.getElementById('buyNowBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.location.href = 'https://imjo.in/H7FSks';
-        });
+        document.getElementById("buyNowBtn").addEventListener("click", (e) => {
+             e.preventDefault();
+    document.getElementById("gg").click();
+  });
 
         // Add some dynamic effects
         document.addEventListener('DOMContentLoaded', function() {
@@ -542,4 +621,3 @@
 
 </body>
 </html>
-   
