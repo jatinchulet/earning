@@ -9,7 +9,539 @@
     * {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifest ANYTHING in 10 Minutes - Revolutionary Technique Finally Revealed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(ellipse at center, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="g"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23g)"/><circle cx="80" cy="40" r="1" fill="url(%23g)"/><circle cx="40" cy="80" r="1.5" fill="url(%23g)"/></svg>') repeat;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .urgent-banner {
+            background: linear-gradient(45deg, #ff0000, #ff4500);
+            padding: 10px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5)); }
+            to { filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.8)); }
+        }
+
+        .hero h2 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: 30px;
+            color: #ff6b35;
+        }
+
+        .subheading {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #cccccc;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .price-section {
+            background: linear-gradient(135deg, #2d1b69 0%, #1a1a2e 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 2px solid #ff6b35;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-section::before {
+            content: 'LIMITED TIME';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #ff0000;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 0 0 10px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .original-price {
+            font-size: 2rem;
+            text-decoration: line-through;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .current-price {
+            font-size: 3.5rem;
+            color: #00ff00;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .bonus-section {
+            background: rgba(255, 107, 53, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid #ff6b35;
+        }
+
+        .bonus-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .bonus-item:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .bonus-item::before {
+            content: '✓';
+            background: #00ff00;
+            color: #000;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+            background: linear-gradient(45deg, #f7931e, #ffd700);
+        }
+
+        .social-proof {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .testimonial {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ff6b35;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #ff6b35;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+
+        .countdown {
+            background: linear-gradient(45deg, #ff0000, #ff4500);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #ff6b35;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+
+        .email-form {
+            background: linear-gradient(135deg, #2d1b69 0%, #1a1a2e 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .email-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            border: 2px solid #ff6b35;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .email-input::placeholder {
+            color: #ccc;
+        }
+
+        .scarcity-indicator {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid #ff0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
+        }
+
+        .money-back {
+            background: linear-gradient(45deg, #00ff00, #32cd32);
+            color: #000;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero h2 { font-size: 1.8rem; }
+            .current-price { font-size: 2.5rem; }
+            .cta-button { padding: 15px 30px; font-size: 1.2rem; }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="urgent-banner">
+                    🔥 BREAKING: Secret Manifestation Technique Finally EXPOSED! 🔥
+                </div>
+                
+                <h1>MANIFEST ANYTHING IN JUST 10 MINUTES</h1>
+                <h2>The Underground Method That's Been Hidden From You...</h2>
+                
+                <p class="subheading">
+                    <strong>Never attracted anything before?</strong> This revolutionary ebook reveals the EXACT 10-minute technique that's helped over 47,000 people manifest their dream life - even complete beginners who failed with everything else!
+                </p>
+
+                <div class="countdown">
+                    ⏰ FLASH SALE ENDS IN: <span id="countdown">23:59:47</span> ⏰
+                </div>
+
+                <div class="scarcity-indicator">
+                    🚨 Only 127 copies left at this price! 🚨
+                </div>
+
+                <div class="price-section">
+                    <div class="original-price">₹2,999</div>
+                    <div class="current-price">₹99</div>
+                    <p style="color: #ff6b35; font-size: 1.2rem; margin-bottom: 20px;">
+                        <strong>96% OFF - TODAY ONLY!</strong>
+                    </p>
+                    
+                    <div class="bonus-section">
+                        <h3 style="color: #ffd700; margin-bottom: 20px;">🎁 EXCLUSIVE BONUSES (Worth ₹4,999) 🎁</h3>
+                        <div class="bonus-item">
+                            <span><strong>BONUS #1:</strong> 21-Day Manifestation Challenge Workbook (₹999 Value)</span>
+                        </div>
+                        <div class="bonus-item">
+                            <span><strong>BONUS #2:</strong> Guided Meditation Audio Series (₹1,499 Value)</span>
+                        </div>
+                        <div class="bonus-item">
+                            <span><strong>BONUS #3:</strong> Money Manifestation Cheat Sheet (₹799 Value)</span>
+                        </div>
+                        <div class="bonus-item">
+                            <span><strong>BONUS #4:</strong> Love Attraction Blueprint (₹899 Value)</span>
+                        </div>
+                        <div class="bonus-item">
+                            <span><strong>BONUS #5:</strong> VIP Email Support (₹799 Value)</span>
+                        </div>
+                    </div>
+
+                    <div class="email-form">
+                        <h3 style="margin-bottom: 20px;">Enter Your Email to Unlock This Secret:</h3>
+                        <form action="https://formspree.io/f/xzzrnjqw" method="POST" id="emailForm">
+                            <input type="email" name="email" class="email-input" placeholder="Enter your email address..." required>
+                            <br>
+                            <button type="submit" class="cta-button">
+                                GET INSTANT ACCESS - ₹99 ONLY
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="social-proof">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #ffd700;">
+                ⭐ What People Are Saying ⭐
+            </h2>
+            
+            <div class="testimonial">
+                <p><strong>"I was skeptical but desperate. This method worked in 6 days! I manifested ₹50,000 out of nowhere!"</strong></p>
+                <p style="color: #ff6b35; margin-top: 10px;">- Priya S., Mumbai</p>
+            </div>
+            
+            <div class="testimonial">
+                <p><strong>"Nothing worked for me before this. Now I'm living my dream life. This is REAL!"</strong></p>
+                <p style="color: #ff6b35; margin-top: 10px;">- Rahul K., Delhi</p>
+            </div>
+            
+            <div class="testimonial">
+                <p><strong>"Finally! A method that actually works. Manifested my soulmate in 2 weeks!"</strong></p>
+                <p style="color: #ff6b35; margin-top: 10px;">- Anita M., Bangalore</p>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Works in 10 Minutes</h3>
+                <p>No more hours of meditation or complex rituals. This technique works in just 10 minutes daily.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Beginner-Friendly</h3>
+                <p>Never manifested before? Perfect! This method is designed for complete beginners.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔮</div>
+                <h3>Scientifically Backed</h3>
+                <p>Based on quantum physics and neuroscience research - not wishful thinking.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 50px 0;">
+            <h2 style="color: #ff0000; margin-bottom: 20px;">⚠️ WARNING ⚠️</h2>
+            <p style="font-size: 1.2rem; color: #ffcccc;">
+                This technique is so powerful that we can only share it with a limited number of people. 
+                Once this page closes, you may never see this offer again!
+            </p>
+            
+            <div style="margin: 30px 0;">
+                <a href="#" class="cta-button" id="buyNowBtn">
+                    SECURE YOUR COPY NOW - ₹99
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const endTime = now + (24 * 60 * 60 * 1000); // 24 hours from now
+            const distance = endTime - now;
+            
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerHTML = 
+                String(hours).padStart(2, '0') + ':' + 
+                String(minutes).padStart(2, '0') + ':' + 
+                String(seconds).padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Email form handling
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.email.value;
+            
+            // Store email (you can send this to Formspree)
+            fetch('https://formspree.io/f/xzzrnjqw', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    message: 'Manifestation Ebook Interest'
+                })
+            });
+            
+            // Redirect to Instamojo payment link
+            window.location.href = 'https://imjo.in/H7FSks';
+        });
+
+        // Buy now button
+        document.getElementById('buyNowBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'https://imjo.in/H7FSks';
+        });
+
+        // Add some dynamic effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate elements on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.feature-card, .testimonial').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(50px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+    <footer style="text-align: center; padding: 30px 20px; background: #0c0c0c; color: #aaa; font-size: 0.9rem;">
+    <div style="margin-bottom: 10px;">
+        <a href="terms.html" style="color: #ff6b35; margin: 0 15px; text-decoration: none;">Terms & Conditions</a>
+        <a href="contact.html" style="color: #ff6b35; margin: 0 15px; text-decoration: none;">Contact Us</a>
+        <a href="refund.html" style="color: #ff6b35; margin: 0 15px; text-decoration: none;">Refund Policy</a>
+    </div>
+    <div>© 2025 Manifest Magic. All rights reserved.</div>
+</footer>
+
+
+</body>
+</html>
     body {
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: #fff;
